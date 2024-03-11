@@ -8,8 +8,8 @@
     Title="CanvasMauiClientBogdan">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:Pages.CoursesPage}"
+        Title="CoursesInfo"
+        ContentTemplate="{DataTemplate local:Pages.GroupPage}"
         Route="MainPage" />
 
 </Shell>

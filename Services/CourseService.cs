@@ -11,6 +11,7 @@ public class CourseService : ICourseService
     private readonly HttpClient _httpClient;
 private readonly string _baseUrl;
 private readonly string _endpoint = "courses";
+
 private readonly string _apiKey;
 public CourseService(IConfiguration configuration)
 {
@@ -34,6 +35,7 @@ var responseStream = await _httpClient.GetStreamAsync(_baseUrl + _endpoint + "/"
 var course = await JsonSerializer.DeserializeAsync<Course>(responseStream);
 return course;
 }
+
 }
 
 

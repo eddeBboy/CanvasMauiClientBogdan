@@ -19,6 +19,9 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
+
+			
+			
 			var assembly = Assembly.GetExecutingAssembly();
 string appsettingsFileName = "CanvasMauiClientBogdan.appsettings.json";
 using (var stream = assembly.GetManifestResourceStream(appsettingsFileName))
@@ -28,9 +31,17 @@ if (stream != null)
 builder.Configuration.AddJsonStream(stream);
 }
 }
+
+//For groups
+builder.Services.AddTransient<IGroupService, GroupService>();
+builder.Services.AddTransient<GroupViewModel>();
+builder.Services.AddSingleton<GroupPage>();
+//For courses
 builder.Services.AddTransient<ICourseService, CourseService>();
 builder.Services.AddTransient<CoursesViewModel>();
 builder.Services.AddSingleton<CoursesPage>();
+
+
 
 #if DEBUG
 		builder.Logging.AddDebug();
