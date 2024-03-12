@@ -7,9 +7,13 @@
     Shell.FlyoutBehavior="Disabled"
     Title="CanvasMauiClientBogdan">
 
-    <ShellContent
-        Title="CoursesInfo"
-        ContentTemplate="{DataTemplate local:Pages.GroupPage}"
-        Route="MainPage" />
+    <TabBar>
+    <ShellSection Title="Courses">
+        <ShellContent ContentTemplate="{DataTemplate local:Pages.CoursesPage}" />
+            </ShellSection>
 
+    <ShellSection Title="Groups">
+<ShellContent ContentTemplate="{DataTemplate local:Pages.GroupPage}" />
+</ShellSection>
+</TabBar>
 </Shell>

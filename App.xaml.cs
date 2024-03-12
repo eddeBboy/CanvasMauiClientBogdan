@@ -1,4 +1,5 @@
 ﻿namespace CanvasMauiClientBogdan;
+using CanvasMauiClientBogdan.Pages;
 
 public partial class App : Application
 {

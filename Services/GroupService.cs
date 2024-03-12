@@ -9,7 +9,7 @@ public class GroupService : IGroupService
 {
     private readonly HttpClient _httpClient;
     private readonly string _baseUrl;
-    private readonly string _endpoint2 = "groups/203247";
+    private readonly string _endpoint2 = "users/self/groups";
 
     private readonly string _apiKey;
     public GroupService(IConfiguration configuration)
